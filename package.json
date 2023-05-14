@@ -1,0 +1,24 @@
+{
+  "name": "record-api",
+  "version": "1.0.0",
+  "description": "An API to save data records from all life need into a json database file",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JeremieLitzler/record-api.git"
+  },
+  "keywords": [
+    "API",
+    "REST",
+    "NodeJS"
+  ],
+  "author": "Jeremie Litzler",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/JeremieLitzler/record-api/issues"
+  },
+  "homepage": "https://github.com/JeremieLitzler/record-api#readme"
+}
