@@ -4,7 +4,8 @@
   "description": "An API to save data records from all life need into a json database file",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -20,5 +21,10 @@
   "bugs": {
     "url": "https://github.com/JeremieLitzler/record-api/issues"
   },
-  "homepage": "https://github.com/JeremieLitzler/record-api#readme"
+  "homepage": "https://github.com/JeremieLitzler/record-api#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "morgan": "^1.10.0"
+  }
 }
