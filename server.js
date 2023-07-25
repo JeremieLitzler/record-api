@@ -1,42 +1,34 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const logger = require('morgan');
-const path = require('path');
+const cors = require('cors');
+
+const db = require('./app/models');
+
 const app = express();
 
-const router = express.Router();
+var corsOptions = {
+  origin: 'http://localhost:8081',
+};
 
-const PORT = process.env.PORT || 3000;
-const NODE_ENV = process.env.NODE_ENV || 'development';
+app.use(cors(corsOptions));
 
-app.set('port', PORT);
-app.set('env', NODE_ENV);
-
-app.use(logger('tiny'));
+// parse requests of content-type - application/json
 app.use(bodyParser.json());
 
-app.use('/', require(path.join(__dirname, '/routes/recordRoutes')));
+// parse requests of content-type - application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use((req, res, next) => {
-  const err = new Error(`${req.method} ${req.url} Not Found`);
-  err.status = 404;
-  next(err);
+db.sequelize.sync({ force: true }).then(() => {
+  console.log('Drop and re-sync db.');
 });
 
-app.use((err, req, res, next) => {
-  console.error(err);
-  res.status(err.status || 500);
-  res.json({
-    error: {
-      message: err.message,
-    },
-  });
+// simple route
+app.get('/', (req, res) => {
+  res.json({ message: 'Welcome to Record API application.' });
 });
 
+// set port, listen for requests
+const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
-  console.log(
-    `Express Server started on Port ${app.get(
-      'port',
-    )} | Environment : ${app.get('env')}`,
-  );
+  console.log(`Server is running on port ${PORT}.`);
 });
