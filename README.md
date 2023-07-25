@@ -22,3 +22,11 @@ Also, in my case, I wanted to use the `UUIDV4` datatype. But Sequelize said:
 > Error: Unknown data type: 'UUIDV4'
 
 I misread [the docs](https://sequelize.org/docs/v6/core-concepts/model-basics/#uuids) and after changing to `UUID`, the table was created!
+
+### Todo's
+
+Continier with [Create the Controller > Create a new object](https://www.bezkoder.com/node-js-express-sequelize-mysql/#Create_the_Controller)
+Enrich with:
+
+- [Sequelize Associations: One-to-Many example – Node.js, MySQL](https://bezkoder.com/sequelize-associate-one-to-many/)
+- [Sequelize Many-to-Many Association example with Node.js & MySQL](https://bezkoder.com/sequelize-associate-many-to-many/)
