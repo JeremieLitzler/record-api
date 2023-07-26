@@ -33,6 +33,24 @@ I misread [the docs](https://sequelize.org/docs/v6/core-concepts/model-basics/#u
 
 ### Todo's
 
+- [x] Add a POST endpoint (Add record)
+- [x] Add a GET "one" endpoint
+- [x] Add a GET "many" endpoint
+  - Has a filter on `category` get param
+- [x] Add a PUT endpoint (Update record)
+- [x] Add a DELETE "one" endpoint
+- [x] Add a DELETE "all" endpoint
+- [ ] Add unit tests
+- [ ] Enhance the `recordCategory` and `recordType` and `recordUnit` inputs with new endpoints to list all existing values:
+  - [ ] for `recordUnit`
+  - [ ] for `recordCategory`
+  - [ ] for `recordType`
+- [ ] Enhance the GET "many" endpoint
+  - [ ] to filter on `recordValue`
+  - [ ] to filter on `recordType`
+  - [ ] to filter on `recordDate` from a range of dates (from > to)
+- [ ] Add a GET "many" endpoint with grouping by a column
+
 Enrich with:
 
 - [Sequelize Associations: One-to-Many example – Node.js, MySQL](https://bezkoder.com/sequelize-associate-one-to-many/)
