@@ -2,6 +2,7 @@ module.exports = (sequelize, Sequelize) => {
   const Record = sequelize.define('record', {
     recordId: {
       type: Sequelize.UUID,
+      defaultValue: Sequelize.UUIDV4,
       allowNull: false,
       primaryKey: true,
     },
@@ -17,7 +18,7 @@ module.exports = (sequelize, Sequelize) => {
       type: Sequelize.STRING,
       allowNull: false,
     },
-    recordUnit: {
+    recordCategory: {
       type: Sequelize.STRING,
       allowNull: false,
     },
@@ -25,7 +26,7 @@ module.exports = (sequelize, Sequelize) => {
       type: Sequelize.STRING,
     },
     recordNotes: {
-      type: Sequelize.STRING(4000),
+      type: Sequelize.STRING(2000),
     },
   });
 

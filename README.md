@@ -13,9 +13,17 @@ I have a CLoudways account with a VPS
 
 I created an empty PHP Custom App to get a Mysql DB
 
-I had to add my local IP address (see [here]() and add it to the Whiltelist IP in the screen available at `https://unified.cloudways.com/server/YOUR_SERVER_ID/security/?tab=MySQL`
+**Connecting to remote MySQL database**:
+
+When having the error:
+
+> ConnectionError [SequelizeConnectionError]: connect ETIMEDOUT
+
+Add my local IP address (see [here](https://whatismyipaddress.com/fr/mon-ip) and add it to the Whiltelist IP in the screen available at `https://unified.cloudways.com/server/YOUR_SERVER_ID/security/?tab=MySQL`. [See Cloudways docs](https://www.cloudways.com/blog/connect-to-remote-mysql-database/#grant-remote-access-to-MySQL-database).
 
 The connection worked instantly with the whitelisting.
+
+**Datatypes**:
 
 Also, in my case, I wanted to use the `UUIDV4` datatype. But Sequelize said:
 
@@ -25,7 +33,6 @@ I misread [the docs](https://sequelize.org/docs/v6/core-concepts/model-basics/#u
 
 ### Todo's
 
-Continier with [Create the Controller > Create a new object](https://www.bezkoder.com/node-js-express-sequelize-mysql/#Create_the_Controller)
 Enrich with:
 
 - [Sequelize Associations: One-to-Many example – Node.js, MySQL](https://bezkoder.com/sequelize-associate-one-to-many/)
