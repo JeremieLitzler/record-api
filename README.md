@@ -1,6 +1,6 @@
 # An API to save data records
 
-An API to save data records from all life need into a json database file
+An API to save data records from all life needs into a NoeJS REST API backup by [SequelizeJS](https://sequelize.org/) and [Cloudways](https://www.cloudways.com/en/?id=174912)
 
 ## How I did it
 
