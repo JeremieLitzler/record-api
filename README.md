@@ -40,6 +40,9 @@ I misread [the docs](https://sequelize.org/docs/v6/core-concepts/model-basics/#u
 - [x] Add a PUT endpoint (Update record)
 - [x] Add a DELETE "one" endpoint
 - [x] Add a DELETE "all" endpoint
+- [x] Add support for local database with MariaDB :
+  - The database is create with
+  - > CREATE DATABASE `mariadb` COLLATE 'utf8mb3_general_ci';
 - [ ] Add unit tests
 - [ ] Enhance the `recordCategory` and `recordType` and `recordUnit` inputs with new endpoints to list all existing values:
   - [ ] for `recordUnit`

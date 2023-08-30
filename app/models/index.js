@@ -1,4 +1,7 @@
-const dbConfig = require('../../../record-api-conf/config/db.config.js');
+//See https://nodejs.dev/en/learn/how-to-read-environment-variables-from-nodejs/
+require('dotenv').config();
+
+const dbConfig = require(`../../../record-api-conf/config/db.config.${process.env.NODE_ENV}.js`);
 
 const Sequelize = require('sequelize');
 const sequelize = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD, {

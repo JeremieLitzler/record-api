@@ -1,0 +1,201 @@
+{
+	"info": {
+		"_postman_id": "80b01354-3d83-44d3-99ad-4edf160452ee",
+		"name": "Record-Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18544189"
+	},
+	"item": [
+		{
+			"name": "Add a record",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"recordDate\": \"2023-08-30\",\r\n    \"recordValue\": \"100\",\r\n    \"recordUnit\": \"Km\",\r\n    \"recordCategory\":\"Vélo\",\r\n    \"recordType\": \"None\",\r\n    \"recordNotes\": null\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/records",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"records"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a record",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"recordDate\": \"2023-08-30\",\r\n    \"recordValue\": \"10\",\r\n    \"recordUnit\": \"Km\",\r\n    \"recordCategory\":\"Vélo\",\r\n    \"recordType\": \"Moutain\",\r\n    \"recordNotes\": null\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/records/0ba5a001-0a3b-4785-9ac9-188cb9df307d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"records",
+						"0ba5a001-0a3b-4785-9ac9-188cb9df307d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get a record",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/records/0ba5a001-0a3b-4785-9ac9-188cb9df307d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"records",
+						"0ba5a001-0a3b-4785-9ac9-188cb9df307d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a record",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/records/e6a0bcbb-ce15-443a-a645-c6eff03f232c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"records",
+						"e6a0bcbb-ce15-443a-a645-c6eff03f232c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all records",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/records/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"records",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete all records",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/records/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"records",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
